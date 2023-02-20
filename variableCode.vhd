@@ -33,6 +33,7 @@ begin
 				for k in 0 to (N-1) loop
 					expected_value := expected_value OR (A(k) AND B(k));
 				end loop;
+				assert (F = expected_value) report "error, f = " & std_logic'image(f) severity Warning;
 			end loop;
 		end loop;
 	end process;
