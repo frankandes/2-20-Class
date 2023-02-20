@@ -29,6 +29,10 @@ begin
 			for j in 0 to (2**N)-1 loop
 				B <= std_logic_vector(to_unsigned(j,N));
 				wait for 100 ns;
+				expected_value := '0';
+				for k in 0 to (N-1) loop
+					expected_value := expected_value OR (A(k) AND B(k));
+				end loop;
 			end loop;
 		end loop;
 	end process;
