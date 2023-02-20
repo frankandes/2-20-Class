@@ -8,3 +8,18 @@ a : and_array
 .
 .
 begin
+	rows : for Row in 0 to N-1 generate
+		Columns : for Col in 0 to N-1 generate
+			.
+			.
+			.
+			rlco : if col = 0 and row  = 1 generate
+			.
+			.
+			.
+		end loop;
+		.
+		.
+		.
+	end loop;
+	
